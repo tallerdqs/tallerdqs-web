@@ -11,7 +11,7 @@ const PROJECTS_RAW = [
     tagline:'Volúmenes de piedra que se asientan en la ladera de El Uro.',
     longDesc:'La casa se escalona con la pendiente y abre sus estancias hacia la sierra. Los muros de piedra local anclan el conjunto y enmarcan vistas precisas del valle.',
     longDesc2:'El programa se reparte en plataformas conectadas por un eje de agua y sombra.' },
-  { id:'casa-er', name:'Casa ER', type:'Vivienda', location:'Santiago, N.L.', year:'2022', client:'Privado', area:'1,950 m²', status:'En etapa de diseño', planes:0,
+  { id:'casa-er', name:'Casa ER', type:'Vivienda', location:'Santiago, N.L.', year:'2022', client:'Privado', area:'1,950 m²', status:'En etapa de diseño', planes:3,
     tagline:'Una casa-patio compacta, ordenada por la luz del norte.',
     longDesc:'Alrededor de un patio central se disponen las áreas comunes y privadas, con plena privacidad hacia la calle. La luz indirecta baña los interiores durante todo el día.',
     longDesc2:'La paleta es sobria: aplanados claros, carpintería de encino y pisos continuos.' },

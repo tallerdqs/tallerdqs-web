@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       Array.from({ length: current.planes }, (_, i) => {
         const n = i + 1;
         return `<div class="plano-item">
-          <img src="${imagePath(current.id, 'plano-' + n + '.jpg')}" alt="Plano ${n} — ${current.name}" loading="lazy">
+          <img src="${imagePath(current.id, 'plano' + n + '.jpg')}" alt="Plano ${n} — ${current.name}" loading="lazy">
           <div class="plano-item__label">Plano ${n}</div>
         </div>`;
       }).join('') +
