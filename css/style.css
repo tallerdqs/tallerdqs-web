@@ -166,6 +166,41 @@ main { padding-top: 62px; }
 .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 .gallery-item { background: #E2E4E7; overflow: hidden; }
 
+/* ── PLANOS ── */
+.planes-section {
+  background: #fff;
+  border-top: 1px solid #DCDEE2;
+  border-bottom: 1px solid #DCDEE2;
+  padding: 70px 40px 80px;
+}
+.planes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+.planes-grid--single { grid-template-columns: 1fr; max-width: 800px; }
+.plano-item {
+  border: 1px solid #DCDEE2;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.plano-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.plano-item__label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9A9A95;
+  padding: 12px 16px;
+  border-top: 1px solid #DCDEE2;
+}
+
 .next-project { display: flex; justify-content: space-between; align-items: center; width: 100%; border-top: 1px solid #18191A; padding: 44px 40px 64px; }
 .next-project__kicker { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #9A9A95; margin-bottom: 12px; }
 .next-project__name { font-size: clamp(28px, 5vw, 60px); font-weight: 300; letter-spacing: -0.02em; text-transform: uppercase; }

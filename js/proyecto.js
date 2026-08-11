@@ -42,6 +42,23 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   `).join('');
 
+  // Planos — solo renderiza la sección si planes > 0
+  const planesSection = document.getElementById('planes-section');
+  if (current.planes && current.planes > 0) {
+    planesSection.hidden = false;
+    const gridClass = current.planes === 1 ? 'planes-grid planes-grid--single' : 'planes-grid';
+    planesSection.querySelector('.planes-grid-container').innerHTML =
+      `<div class="${gridClass}">` +
+      Array.from({ length: current.planes }, (_, i) => {
+        const n = i + 1;
+        return `<div class="plano-item">
+          <img src="${imagePath(current.id, 'plano-' + n + '.jpg')}" alt="Plano ${n} — ${current.name}" loading="lazy">
+          <div class="plano-item__label">Plano ${n}</div>
+        </div>`;
+      }).join('') +
+      `</div>`;
+  }
+
   document.getElementById('next-project-link').href = `proyecto.html?id=${next.id}`;
   document.getElementById('next-project-name').textContent = next.name;
 });
