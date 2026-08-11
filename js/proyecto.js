@@ -36,11 +36,17 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   `).join('');
 
-  document.getElementById('gallery-grid').innerHTML = projectGallery(current).map(shot => `
-    <div class="gallery-item" style="aspect-ratio:${shot.ratio};">
-      ${imgSlotHTML({ src: imagePath(current.id, shot.file), label: shot.label })}
-    </div>
-  `).join('');
+  // Galería de fotos — solo renderiza si hay fotos definidas
+  const gallerySection = document.getElementById('gallery-section');
+  if (current.fotos && current.fotos.length > 0) {
+    gallerySection.hidden = false;
+    document.getElementById('gallery-grid').innerHTML = current.fotos.map((slug, i) => `
+      <div class="gallery-item">
+        ${imgSlotHTML({ src: imagePath(current.id, fotoFile(i, slug)), label: fotoLabel(slug) })}
+        <div class="gallery-item__label">${fotoLabel(slug)}</div>
+      </div>
+    `).join('');
+  }
 
   // Planos — solo renderiza la sección si planes > 0
   const planesSection = document.getElementById('planes-section');
