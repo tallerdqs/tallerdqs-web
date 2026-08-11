@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('detail-meta').innerHTML = `${current.location}<br>${current.year}`;
 
   document.getElementById('detail-cover').innerHTML = imgSlotHTML({
-    src: imagePath(current.id, 'portada.jpg'),
+    src: portadaSrc(current),
     label: 'Portada',
   });
 

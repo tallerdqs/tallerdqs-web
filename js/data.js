@@ -12,6 +12,7 @@ const PROJECTS_RAW = [
     longDesc:'La casa se escalona con la pendiente y abre sus estancias hacia la sierra. Los muros de piedra local anclan el conjunto y enmarcan vistas precisas del valle.',
     longDesc2:'El programa se reparte en plataformas conectadas por un eje de agua y sombra.' },
   { id:'casa-er', name:'Casa ER', type:'Vivienda', location:'Santiago, N.L.', year:'2022', client:'Privado', area:'1,950 m²', status:'En etapa de diseño', planes:3,
+    portada:'foto1-FACHADA FRONTAL.png',
     fotos:[
       'foto1-FACHADA FRONTAL.png',
       'foto2-FACHADA POSTERIOR 2.png',
@@ -128,6 +129,11 @@ function uniqueInOrder(arr) {
 
 function imagePath(slug, file) {
   return `images/projects/${slug}/${file}`;
+}
+
+function portadaSrc(p) {
+  const file = p.portada || 'portada.jpg';
+  return `images/projects/${p.id}/${encodeURIComponent(file)}`;
 }
 
 /* Extrae el título legible del nombre de archivo.

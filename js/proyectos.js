@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     els.gridWrap.innerHTML = `<div class="proyectos-grid">${list.map(p => `
       <article class="proj-card img-card">
         <div class="proj-card__media">
-          ${imgSlotHTML({ src: imagePath(p.id, 'portada.jpg'), label: p.name, mono: true })}
+          ${imgSlotHTML({ src: portadaSrc(p), label: p.name, mono: true })}
           <span class="proj-card__num">${p.num}</span>
         </div>
         <a class="proj-card__title" href="proyecto.html?id=${p.id}">${p.name} ↗</a>

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   grid.innerHTML = projects.map(p => `
     <article class="home-card img-card">
       <div class="home-card__media">
-        ${imgSlotHTML({ src: imagePath(p.id, 'portada.jpg'), label: p.name, mono: true })}
+        ${imgSlotHTML({ src: portadaSrc(p), label: p.name, mono: true })}
         <span class="home-card__num">${p.num}</span>
       </div>
       <div class="home-card__meta">
