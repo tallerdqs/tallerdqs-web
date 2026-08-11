@@ -163,9 +163,10 @@ main { padding-top: 62px; }
 .detail-fact__v { font-size: 13px; color: #18191A; text-align: right; }
 
 .gallery-section { padding: 0 40px 90px; }
-.gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .gallery-item { background: #E2E4E7; overflow: hidden; display: flex; flex-direction: column; }
 .gallery-item .img-slot { aspect-ratio: 4 / 3; flex: 1; }
+.gallery-item .img-slot__label { display: none; }
 .gallery-item__label {
   font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #9A9A95;
   padding: 10px 14px; background: #F8F8F7; border-top: 1px solid #DCDEE2;
