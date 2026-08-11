@@ -11,7 +11,28 @@ const PROJECTS_RAW = [
     tagline:'Volúmenes de piedra que se asientan en la ladera de El Uro.',
     longDesc:'La casa se escalona con la pendiente y abre sus estancias hacia la sierra. Los muros de piedra local anclan el conjunto y enmarcan vistas precisas del valle.',
     longDesc2:'El programa se reparte en plataformas conectadas por un eje de agua y sombra.' },
-  { id:'casa-er', name:'Casa ER', type:'Vivienda', location:'Santiago, N.L.', year:'2022', client:'Privado', area:'1,950 m²', status:'En etapa de diseño', planes:3, fotos:[],
+  { id:'casa-er', name:'Casa ER', type:'Vivienda', location:'Santiago, N.L.', year:'2022', client:'Privado', area:'1,950 m²', status:'En etapa de diseño', planes:3,
+    fotos:[
+      'foto1-FACHADA FRONTAL.png',
+      'foto2-FACHADA POSTERIOR 2.png',
+      'foto3-FACHADA POSTERIOR.png',
+      'foto4-RECIBIDOR.png',
+      'foto5-ESCALERA.png',
+      'foto6-AREA SOCIAL.png',
+      'foto7-COCINA.png',
+      'foto8-TERRAZA.png',
+      'foto9-BIBLIOTECA.png',
+      'foto10-BAR BIBLIOTECA.png',
+      'foto11-OFICINA.png',
+      'foto12-ESTUDIO GRABACION.png',
+      'foto13-PASILLO SOTANO.png',
+      'foto14-SPEAK EASY.png',
+      'foto15-CINE.png',
+      'foto16-ESCALERAS PRIV.png',
+      'foto20-PASILLO CUARTOS.png',
+      'foto-21RECAMARA PPAL.png',
+      'foto22-RECAMARA SEC.png',
+    ],
     tagline:'Una casa-patio compacta, ordenada por la luz del norte.',
     longDesc:'Alrededor de un patio central se disponen las áreas comunes y privadas, con plena privacidad hacia la calle. La luz indirecta baña los interiores durante todo el día.',
     longDesc2:'La paleta es sobria: aplanados claros, carpintería de encino y pisos continuos.' },
@@ -109,12 +130,18 @@ function imagePath(slug, file) {
   return `images/projects/${slug}/${file}`;
 }
 
-/* Convierte 'sala-principal' → 'Sala Principal' */
-function fotoLabel(slug) {
-  return slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+/* Extrae el título legible del nombre de archivo.
+   'foto1-FACHADA FRONTAL.png' → 'Fachada Frontal'
+   'foto-21RECAMARA PPAL.png' → 'Recamara Ppal' */
+function fotoLabel(filename) {
+  return filename
+    .replace(/^foto-?\d+-?/i, '')
+    .replace(/\.[^.]+$/, '')
+    .toLowerCase()
+    .replace(/\b\w/g, c => c.toUpperCase());
 }
 
-/* Construye el nombre de archivo: fotos:['terraza','sala'] → foto1-terraza.jpg, foto2-sala.jpg */
-function fotoFile(index, slug) {
-  return `foto${index + 1}-${slug}.jpg`;
+/* URL-encoda el nombre de archivo para usarlo en src de <img> */
+function fotoSrc(slug, filename) {
+  return `images/projects/${slug}/${encodeURIComponent(filename)}`;
 }

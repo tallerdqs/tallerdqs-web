@@ -40,10 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const gallerySection = document.getElementById('gallery-section');
   if (current.fotos && current.fotos.length > 0) {
     gallerySection.hidden = false;
-    document.getElementById('gallery-grid').innerHTML = current.fotos.map((slug, i) => `
+    document.getElementById('gallery-grid').innerHTML = current.fotos.map(filename => `
       <div class="gallery-item">
-        ${imgSlotHTML({ src: imagePath(current.id, fotoFile(i, slug)), label: fotoLabel(slug) })}
-        <div class="gallery-item__label">${fotoLabel(slug)}</div>
+        ${imgSlotHTML({ src: fotoSrc(current.id, filename), label: fotoLabel(filename) })}
+        <div class="gallery-item__label">${fotoLabel(filename)}</div>
       </div>
     `).join('');
   }
@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const n = i + 1;
         return `<div class="plano-item">
           <img src="${imagePath(current.id, 'plano' + n + '.jpg')}" alt="Plano ${n} — ${current.name}" loading="lazy">
-          <div class="plano-item__label">Plano ${n}</div>
         </div>`;
       }).join('') +
       `</div>`;
