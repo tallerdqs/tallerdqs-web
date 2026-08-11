@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proyectos — tallerDQS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="proyectos">
+
+<nav class="nav">
+  <a class="nav__logo" href="index.html"><img src="assets/logo-dqs.png" alt="tallerDQS"></a>
+  <div class="nav__links">
+    <a class="nav__link" href="proyectos.html">Proyectos</a>
+    <a class="nav__link" href="index.html#estudio">Estudio</a>
+    <a class="nav__link" href="index.html#servicios">Servicios</a>
+    <a class="nav__link" href="index.html#contacto">Contacto</a>
+  </div>
+</nav>
+
+<main>
+  <div class="detail-back"><a href="index.html">← Inicio</a></div>
+  <header class="proyectos-header">
+    <h1 class="proyectos-header__title">Proyectos</h1>
+    <span class="proyectos-header__count" id="proyectos-count"></span>
+  </header>
+  <section class="filters">
+    <div class="filters__inner">
+      <div class="filter-row">
+        <span class="filter-row__label">Tipo</span>
+        <div class="filter-row__opts" id="filter-type"></div>
+      </div>
+      <div class="filter-row">
+        <span class="filter-row__label">Ubicación</span>
+        <div class="filter-row__opts" id="filter-loc"></div>
+      </div>
+      <div class="filter-row">
+        <span class="filter-row__label">Año</span>
+        <div class="filter-row__opts" id="filter-year"></div>
+      </div>
+    </div>
+  </section>
+  <section class="proyectos-grid-wrap" id="proyectos-grid-wrap"></section>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/proyectos.js"></script>
+</body>
+</html>

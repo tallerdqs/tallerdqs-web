@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proyecto — tallerDQS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="proyecto">
+
+<nav class="nav">
+  <a class="nav__logo" href="index.html"><img src="assets/logo-dqs.png" alt="tallerDQS"></a>
+  <div class="nav__links">
+    <a class="nav__link" href="proyectos.html">Proyectos</a>
+    <a class="nav__link" href="index.html#estudio">Estudio</a>
+    <a class="nav__link" href="index.html#servicios">Servicios</a>
+    <a class="nav__link" href="index.html#contacto">Contacto</a>
+  </div>
+</nav>
+
+<main>
+  <div class="detail-back"><a href="proyectos.html">← Todos los proyectos</a></div>
+
+  <header class="detail-header">
+    <div>
+      <div class="detail-header__kicker" id="detail-kicker"></div>
+      <h1 class="detail-header__title" id="detail-title"></h1>
+    </div>
+    <div class="detail-header__meta" id="detail-meta"></div>
+  </header>
+
+  <div class="detail-cover" id="detail-cover"></div>
+
+  <section class="detail-info">
+    <div class="detail-info__copy">
+      <h2 class="detail-info__tagline" id="detail-tagline"></h2>
+      <p id="detail-desc-1"></p>
+      <p id="detail-desc-2"></p>
+    </div>
+    <div class="detail-facts" id="detail-facts"></div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="section-head">
+      <span class="section-head__text">Galería</span>
+      <span class="section-head__rule"></span>
+    </div>
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </section>
+
+  <a class="next-project" id="next-project-link" href="#">
+    <div>
+      <div class="next-project__kicker">Siguiente proyecto</div>
+      <div class="next-project__name" id="next-project-name"></div>
+    </div>
+    <span class="next-project__arrow">→</span>
+  </a>
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+<script src="js/proyecto.js"></script>
+</body>
+</html>
