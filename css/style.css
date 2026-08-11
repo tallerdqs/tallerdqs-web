@@ -185,7 +185,6 @@ main { padding-top: 62px; }
   gap: 20px;
 }
 .plano-item {
-  border: 1px solid #DCDEE2;
   background: #fff;
   overflow: hidden;
 }
