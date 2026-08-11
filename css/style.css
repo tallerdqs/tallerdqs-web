@@ -175,10 +175,9 @@ main { padding-top: 62px; }
 }
 .planes-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
-.planes-grid--single { grid-template-columns: 1fr; max-width: 800px; }
 .plano-item {
   border: 1px solid #DCDEE2;
   background: #fff;

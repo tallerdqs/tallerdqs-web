@@ -46,9 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const planesSection = document.getElementById('planes-section');
   if (current.planes && current.planes > 0) {
     planesSection.hidden = false;
-    const gridClass = current.planes === 1 ? 'planes-grid planes-grid--single' : 'planes-grid';
     planesSection.querySelector('.planes-grid-container').innerHTML =
-      `<div class="${gridClass}">` +
+      `<div class="planes-grid">` +
       Array.from({ length: current.planes }, (_, i) => {
         const n = i + 1;
         return `<div class="plano-item">
