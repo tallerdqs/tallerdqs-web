@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     <article class="home-card img-card">
       <div class="home-card__media">
         ${imgSlotHTML({ src: portadaSrc(p), label: p.name, mono: true })}
-        <span class="home-card__num">${p.num}</span>
       </div>
       <div class="home-card__meta">
         <a class="home-card__title" href="proyecto.html?id=${p.id}">${p.name} ↗</a>
