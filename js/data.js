@@ -3,11 +3,16 @@
 /* planes: número de archivos plano-1.jpg, plano-2.jpg… que existen en la carpeta del proyecto.
    Ponlo en 0 si no hay planos todavía. Agrégalo cuando subas los archivos. */
 const PROJECTS_RAW = [
-  { id:'casa-arboledas', name:'Casa Arboledas', type:'Vivienda', location:'Santiago, N.L.', year:'2024', client:'Privado', area:'360 m²', status:'Construido', planes:0, fotos:[],
+  { id:'casa-arboledas', name:'Casa Arboledas', type:'Vivienda', location:'Santiago, N.L.', year:'2024', client:'Privado', area:'360 m²', status:'Construido', planes:3,
+    portada:'foto1-FRONTAL 1.jpg',
+    fotos:['foto1-FRONTAL 1.jpg','foto2-FRONTAL 2.jpg','foto3-SALA.jpg','foto4-COMEDOR.jpg','foto5-MASTERBEDROOM.jpg','foto6-POSTERIOR 1.jpg'],
     tagline:'Una casa que crece entre los árboles existentes del terreno.',
     longDesc:'La planta se pliega para conservar los árboles maduros del predio, que se vuelven el centro de cada espacio. Patios y dobles alturas llevan luz y vegetación al interior.',
     longDesc2:'Materiales cálidos —madera, barro y concreto pulido— dan continuidad entre el jardín y las habitaciones.' },
-  { id:'casa-el-uro', name:'Casa El Uro', type:'Vivienda', location:'Monterrey, N.L.', year:'2023', client:'Privado', area:'520 m²', status:'Construido', planes:0, fotos:[],
+  { id:'casa-el-uro', name:'Casa El Uro', type:'Vivienda', location:'Monterrey, N.L.', year:'2023', client:'Privado', area:'520 m²', status:'Construido', planes:3,
+    portada:'foto1 - Vista Frontal.png',
+    fotos:['foto1 - Vista Frontal.png','foto2- Vista Trasera 1.png','foto3 - Vista Trasera 2.png'],
+    planosFiles:['plano1-El Uro Sotano.jpg','plano2-El Uro PB.jpg','plano3-El Uro PA.jpg'],
     tagline:'Volúmenes de piedra que se asientan en la ladera de El Uro.',
     longDesc:'La casa se escalona con la pendiente y abre sus estancias hacia la sierra. Los muros de piedra local anclan el conjunto y enmarcan vistas precisas del valle.',
     longDesc2:'El programa se reparte en plataformas conectadas por un eje de agua y sombra.' },
@@ -41,11 +46,15 @@ const PROJECTS_RAW = [
     tagline:'Reinterpretación de la casa urbana en un lote estrecho.',
     longDesc:'En un predio angosto, la casa se organiza en torno a un vacío vertical que conduce la luz hasta la planta baja. Las terrazas escalonadas amplían cada nivel.',
     longDesc2:'La fachada de celosía regula la privacidad y el asoleamiento.' },
-  { id:'depto-pixel', name:'Depto Pixel', type:'Vivienda', location:'Monterrey, N.L.', year:'2023', client:'Privado', area:'180 m²', status:'Construido', planes:0, fotos:[],
+  { id:'depto-pixel', name:'Depto Pixel', type:'Vivienda', location:'Monterrey, N.L.', year:'2023', client:'Privado', area:'180 m²', status:'Construido', planes:0,
+    portada:'Depto Pixel 1.png',
+    fotos:['Depto Pixel 1.png','Depto Pixel 2.png','Depto Pixel 3.png','Depto Pixel 5.png','Depto Pixel 6.png','Depto Pixel 7.png','Depto Pixel 8.png'],
     tagline:'Un departamento flexible que cambia con el día.',
     longDesc:'Un núcleo de servicios libera el perímetro para un espacio continuo y luminoso. Paneles corredizos reconfiguran las áreas según el uso.',
     longDesc2:'El mobiliario a medida integra almacenaje, cocina y trabajo en una sola pieza.' },
-  { id:'rancho-gg', name:'Rancho GG', type:'Campestre', location:'Allende, N.L.', year:'2025', client:'Privado', area:'1,200 m²', status:'En construcción', planes:0, fotos:[],
+  { id:'rancho-gg', name:'Rancho GG', type:'Campestre', location:'Allende, N.L.', year:'2025', client:'Privado', area:'1,200 m²', status:'En construcción', planes:0,
+    portada:'foto1-CABALLERIZAS.png',
+    fotos:['foto1-CABALLERIZAS.png','foto2-CABALLERIZAS.png','foto3-CABALLERIZAS.png','foto4-CABALLERIZAS.png','foto5- CASA DE CAMPO.jpg','foto6- CASA DE CAMPO.png','foto7-SALA COMEDOR.png','foto8- RECAMARA PRINCIPAL.png'],
     tagline:'Una casa de campo que se extiende horizontal sobre el llano.',
     longDesc:'El proyecto nace de la idea del cliente de desarrollar unas caballerizas sustentables: un espacio conectado con su entorno, resuelto con materiales simples, bajo mantenimiento y costo controlado, sin sacrificar estética, esencia ni funcionalidad.',
     longDesc2:'A partir de esta premisa se desarrolló un master plan que integra tres componentes: las caballerizas, una casa para el personal de servicio y una casa de campo. Cada volumen se orientó para aprovechar las mejores vistas del predio, colocándose frente a frente entre sí —una decisión que genera visibilidad cruzada entre los espacios y responde a la orientación y ventilación específicas que cada uso requiere.',
@@ -58,14 +67,19 @@ const PROJECTS_RAW = [
     tagline:'Aromas y luz en un espacio pequeño y preciso.',
     longDesc:'La cafetería aprovecha un local estrecho con un mostrador continuo y espejos que amplían la percepción. La iluminación puntual destaca el producto.',
     longDesc2:'Texturas en tono tierra y vegetación dan calidez al conjunto.' },
-  { id:'estudio-maar-danza', name:'Estudio Maar Danza', type:'Comercial', location:'Santiago, N.L.', year:'2024', client:'Privado', area:'220 m²', status:'Construido', planes:0, fotos:[],
+  { id:'estudio-maar-danza', name:'Estudio Maar Danza', type:'Comercial', location:'Santiago, N.L.', year:'2024', client:'Privado', area:'220 m²', status:'Construido', planes:1,
+    portada:'foto1-SALA DE ESPERA Y RECEPCION.png',
+    fotos:['foto1-SALA DE ESPERA Y RECEPCION.png','foto2- SALON DE BAILE.png'],
     tagline:'Un estudio de danza hecho de luz, madera y silencio.',
     longDesc:'La sala principal busca proporción y acústica: piso flotante de madera, muros tratados y un gran ventanal hacia el norte. El movimiento es el centro del proyecto.',
     longDesc2:'Las áreas de apoyo y vestidores se resuelven con economía de materiales.' },
-  { id:'terraza-ell', name:'Terraza ELL', type:'Comercial', location:'San Pedro, N.L.', year:'2025', client:'Privado', area:'160 m²', status:'Construido', planes:0, fotos:[],
-    tagline:'Una terraza-mirador para reunir al aire libre.',
-    longDesc:'La intervención añade una estructura ligera de sombra sobre una azotea existente. Jardineras y celosías crean microclimas para distintos usos.',
-    longDesc2:'El pavimento y el mobiliario unifican el conjunto con una paleta neutra.' },
+  { id:'terraza-ell', name:'Terraza ELL', type:'Remodelación', location:'San Pedro, N.L.', year:'2025', client:'Privado', area:'120 m²', status:'Construido', planes:0,
+    portada:'Terraza ELL 1.jpg',
+    fotos:['Terraza ELL 1.jpg','Terraza ELL 2.jpg','Terraza ELL 3.jpg','Terraza ELL 4.jpg','Terraza ELL 5.jpg','Terraza ELL 6.jpg','Terraza ELL 7.jpg'],
+    tagline:'Una terraza independiente concebida para la convivencia y los eventos.',
+    longDesc:'El proyecto consiste en una extensión del área social de una residencia existente: una terraza independiente de la vivienda principal, concebida como espacio de convivencia y eventos.',
+    longDesc2:'La estructura se resolvió mediante una cubierta sin columnas visibles, lo que otorga una amplitud completa al espacio y permite una circulación y conexión totalmente abiertas. Los materiales y acabados dialogan con la casa original, pero expresan con claridad la modernidad y el momento en que este espacio fue incorporado.',
+    longDesc3:'El resultado es un volumen ligero que admite múltiples funcionalidades, y que integra un área de asador —elemento imprescindible para el cliente.' },
   { id:'terraza-gt', name:'Terraza GT', type:'Comercial', location:'Chicago, IL', year:'2024', client:'Privado', area:'150 m²', status:'Construido', planes:0, fotos:[],
     tagline:'Una azotea reconvertida en sala de estar urbana.',
     longDesc:'Sobre un edificio existente, la terraza ofrece sombra, vegetación y vistas a la ciudad. La estructura metálica se monta en seco para reducir cargas.',
@@ -144,6 +158,7 @@ function fotoLabel(filename) {
   return filename
     .replace(/^foto-?\d+-?/i, '')
     .replace(/\.[^.]+$/, '')
+    .trim()
     .toLowerCase()
     .replace(/\b\w/g, c => c.toUpperCase());
 }

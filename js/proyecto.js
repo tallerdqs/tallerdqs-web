@@ -55,14 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const planesSection = document.getElementById('planes-section');
   if (current.planes && current.planes > 0) {
     planesSection.hidden = false;
+    const planoFiles = current.planosFiles ||
+      Array.from({ length: current.planes }, (_, i) => `plano${i + 1}.jpg`);
     planesSection.querySelector('.planes-grid-container').innerHTML =
       `<div class="planes-grid">` +
-      Array.from({ length: current.planes }, (_, i) => {
-        const n = i + 1;
-        return `<div class="plano-item">
-          <img src="${imagePath(current.id, 'plano' + n + '.jpg')}" alt="Plano ${n} — ${current.name}" loading="lazy">
-        </div>`;
-      }).join('') +
+      planoFiles.map((file, i) => `<div class="plano-item">
+          <img src="${imagePath(current.id, encodeURIComponent(file))}" alt="Plano ${i + 1} — ${current.name}" loading="lazy">
+        </div>`).join('') +
       `</div>`;
   }
 
