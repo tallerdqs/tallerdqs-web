@@ -67,7 +67,7 @@ main { padding-top: 62px; }
 .home-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; padding: 0 40px 110px; }
 .home-card { display: flex; flex-direction: column; opacity: .38; transition: opacity .55s ease; }
 .home-card:hover { opacity: 1; }
-.home-card__media { position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: #E2E4E7; }
+.home-card__media { display: block; position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: #E2E4E7; }
 .home-card__num { position: absolute; top: 14px; left: 14px; font-size: 11px; letter-spacing: 0.12em; color: #F8F8F7; mix-blend-mode: difference; }
 .home-card__meta { display: flex; justify-content: space-between; align-items: baseline; margin-top: 14px; gap: 16px; }
 .home-card__title { font-size: 16px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #18191A; }
@@ -168,6 +168,7 @@ main { padding-top: 62px; }
 .gallery-item .img-slot { aspect-ratio: 4 / 3; flex: 1; }
 .gallery-item .img-slot__label { display: none; }
 .proj-card .img-slot__label { display: none; }
+.home-card .img-slot__label { display: none; }
 .gallery-item__label {
   font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #9A9A95;
   padding: 10px 14px; background: #F8F8F7; border-top: 1px solid #DCDEE2;
