@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const desc3el = document.getElementById('detail-desc-3');
   if (current.longDesc3) desc3el.textContent = current.longDesc3;
   else desc3el.remove();
+  const desc4el = document.getElementById('detail-desc-4');
+  if (current.longDesc4) desc4el.textContent = current.longDesc4;
+  else desc4el.remove();
+  const desc5el = document.getElementById('detail-desc-5');
+  if (current.longDesc5) desc5el.textContent = current.longDesc5;
+  else desc5el.remove();
 
   const facts = [
     { k: 'Año', v: current.year },
