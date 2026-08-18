@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('detail-cover').innerHTML = imgSlotHTML({
     src: portadaSrc(current),
-    label: 'Portada',
+    label: '',
   });
 
   document.getElementById('detail-tagline').textContent = current.tagline;
@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const gallerySection = document.getElementById('gallery-section');
   if (current.fotos && current.fotos.length > 0) {
     gallerySection.hidden = false;
-    document.getElementById('gallery-grid').innerHTML = current.fotos.map(filename => `
-      <div class="gallery-item">
+    document.getElementById('gallery-grid').innerHTML = current.fotos.map((filename, i) => `
+      <div class="gallery-item" data-index="${i}" style="cursor:pointer">
         ${imgSlotHTML({ src: fotoSrc(current.id, filename), label: fotoLabel(filename) })}
         <div class="gallery-item__label">${fotoLabel(filename)}</div>
       </div>
@@ -67,4 +67,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('next-project-link').href = `proyecto.html?id=${next.id}`;
   document.getElementById('next-project-name').textContent = next.name;
+
+  // Lightbox
+  const fotos = (current.fotos && current.fotos.length > 0)
+    ? current.fotos
+    : [current.portada || 'portada.jpg'];
+
+  const lb = document.getElementById('lightbox');
+  const lbImg = lb.querySelector('.lightbox__img');
+  const lbCounter = lb.querySelector('.lightbox__counter');
+  let lbIdx = 0;
+
+  function lbShow(idx) {
+    lbIdx = ((idx % fotos.length) + fotos.length) % fotos.length;
+    lbImg.src = fotoSrc(current.id, fotos[lbIdx]);
+    lbImg.alt = fotoLabel(fotos[lbIdx]);
+    lbCounter.textContent = `${lbIdx + 1} / ${fotos.length}`;
+  }
+
+  function lbOpen(idx) {
+    lbShow(idx);
+    lb.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+
+  function lbClose() {
+    lb.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('detail-cover').addEventListener('click', () => lbOpen(0));
+  lb.querySelector('.lightbox__close').addEventListener('click', lbClose);
+  lb.querySelector('.lightbox__prev').addEventListener('click', () => lbShow(lbIdx - 1));
+  lb.querySelector('.lightbox__next').addEventListener('click', () => lbShow(lbIdx + 1));
+
+  lb.addEventListener('click', (e) => { if (e.target === lb) lbClose(); });
+
+  document.addEventListener('keydown', (e) => {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') lbClose();
+    if (e.key === 'ArrowLeft') lbShow(lbIdx - 1);
+    if (e.key === 'ArrowRight') lbShow(lbIdx + 1);
+  });
+
+  const galleryGrid = document.getElementById('gallery-grid');
+  if (galleryGrid) {
+    galleryGrid.addEventListener('click', (e) => {
+      const item = e.target.closest('.gallery-item');
+      if (!item) return;
+      lbOpen(parseInt(item.dataset.index, 10));
+    });
+  }
 });
