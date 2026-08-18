@@ -3,12 +3,13 @@
 /* planes: número de archivos plano-1.jpg, plano-2.jpg… que existen en la carpeta del proyecto.
    Ponlo en 0 si no hay planos todavía. Agrégalo cuando subas los archivos. */
 const PROJECTS_RAW = [
-  { id:'casa-arboledas', name:'Casa Arboledas', type:'Vivienda', location:'Santiago, N.L.', year:'2024', client:'Privado', area:'360 m²', status:'Construido', planes:3,
+  { id:'casa-arboledas', name:'Casas Arboledas', type:'Vivienda', location:'Santiago, N.L.', year:'2026', client:'Privado', area:'295 m²', status:'En construcción', planes:3,
     portada:'foto1-FRONTAL 1.jpg',
     fotos:['foto1-FRONTAL 1.jpg','foto2-FRONTAL 2.jpg','foto3-SALA.jpg','foto4-COMEDOR.jpg','foto5-MASTERBEDROOM.jpg','foto6-POSTERIOR 1.jpg'],
-    tagline:'Una casa que crece entre los árboles existentes del terreno.',
-    longDesc:'La planta se pliega para conservar los árboles maduros del predio, que se vuelven el centro de cada espacio. Patios y dobles alturas llevan luz y vegetación al interior.',
-    longDesc2:'Materiales cálidos —madera, barro y concreto pulido— dan continuidad entre el jardín y las habitaciones.' },
+    tagline:'Tipología residencial abierta, orientada a las vistas de la sierra.',
+    longDesc:'Proyecto de desarrollo residencial en el que se desarrolló una tipología funcional de planta abierta, diseñada para aprovechar al máximo el terreno disponible y orientada hacia las vistas que el predio ofrecía.',
+    longDesc2:'El desarrollo contempla dos casas de tipología prácticamente idéntica, diferenciadas mediante materialidad y fachada propias para darle identidad e individualidad a cada una. La idea central fue crear una vivienda funcional y estéticamente accesible, pensada para conectar con cualquier posible cliente.',
+    longDesc3:'La planta baja alberga el área social: sala y comedor en un espacio abierto, con la posibilidad de integrar o cerrar la cocina según la preferencia del usuario, además de un cuarto de servicio con acceso independiente. La segunda planta concentra las tres recámaras, cada una con walk-in closet, organizadas alrededor de un family room que funciona como distribuidor. En la tercera planta se ubica una segunda área social abierta, con capacidad de adaptarse a distintos usos, un estudio, y dos terrazas que aprovechan las vistas hacia las montañas de Monterrey.' },
   { id:'casa-el-uro', name:'Casa El Uro', type:'Vivienda', location:'Monterrey, N.L.', year:'2023', client:'Privado', area:'520 m²', status:'Construido', planes:3,
     portada:'foto1 - Vista Frontal.png',
     fotos:['foto1 - Vista Frontal.png','foto2- Vista Trasera 1.png','foto3 - Vista Trasera 2.png'],
