@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
       <article class="proj-card img-card">
         <a class="proj-card__media" href="proyecto.html?id=${p.id}">
           ${imgSlotHTML({ src: portadaSrc(p), label: p.name, mono: true })}
-          <span class="proj-card__num">${p.num}</span>
         </a>
         <a class="proj-card__title" href="proyecto.html?id=${p.id}">${p.name} ↗</a>
         <div class="proj-card__sub">${p.type} · ${p.location} · ${p.year}</div>
