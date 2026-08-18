@@ -6,9 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const projects = getHomeProjects();
   grid.innerHTML = projects.map(p => `
     <article class="home-card img-card">
-      <div class="home-card__media">
+      <a class="home-card__media" href="proyecto.html?id=${p.id}">
         ${imgSlotHTML({ src: portadaSrc(p), label: p.name, mono: true })}
-      </div>
+      </a>
       <div class="home-card__meta">
         <a class="home-card__title" href="proyecto.html?id=${p.id}">${p.name} ↗</a>
         <span class="home-card__year">${p.year}</span>
