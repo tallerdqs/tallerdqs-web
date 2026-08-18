@@ -148,7 +148,7 @@ main { padding-top: 62px; }
 
 .detail-header { padding: 40px 40px 48px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 24px; }
 .detail-header__kicker { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #9A9A95; margin-bottom: 16px; }
-.detail-header__title { margin: 0; font-weight: 300; font-size: clamp(36px, 6.5vw, 88px); line-height: 0.95; letter-spacing: -0.03em; text-transform: uppercase; }
+.detail-header__title { margin: 0; font-weight: 300; font-size: clamp(36px, 6.5vw, 88px); line-height: 1; letter-spacing: -0.03em; text-transform: uppercase; }
 .detail-header__meta { font-size: 13px; color: #54565A; text-align: right; }
 
 .detail-cover { height: 78vh; background: #E2E4E7; margin: 0 40px; overflow: hidden; }
@@ -167,6 +167,7 @@ main { padding-top: 62px; }
 .gallery-item { background: #E2E4E7; overflow: hidden; display: flex; flex-direction: column; }
 .gallery-item .img-slot { aspect-ratio: 4 / 3; flex: 1; }
 .gallery-item .img-slot__label { display: none; }
+.proj-card .img-slot__label { display: none; }
 .gallery-item__label {
   font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #9A9A95;
   padding: 10px 14px; background: #F8F8F7; border-top: 1px solid #DCDEE2;
@@ -216,7 +217,7 @@ main { padding-top: 62px; }
 .proyectos-grid-wrap { padding: 0 40px 120px; }
 .proyectos-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px 22px; }
 .proj-card { display: flex; flex-direction: column; }
-.proj-card__media { position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: #E2E4E7; }
+.proj-card__media { display: block; position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; background: #E2E4E7; }
 .proj-card__num { position: absolute; top: 12px; left: 12px; font-size: 11px; letter-spacing: 0.12em; color: #F8F8F7; mix-blend-mode: difference; }
 .proj-card__title { margin-top: 12px; font-size: 14px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #18191A; display: inline-block; border-bottom: 1px solid transparent; transition: border-color .3s; }
 .proj-card__title:hover { border-bottom: 1px solid #5E7184; }
