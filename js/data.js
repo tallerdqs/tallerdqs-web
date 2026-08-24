@@ -60,6 +60,12 @@ const PROJECTS_RAW = [
     longDesc2:'Resuelto con materiales y colores sobrios, el departamento busca acompañar la convivencia sin volverse el protagonista: un fondo neutro que deja que la vida lo habite.',
     longDesc3:'La cocina se abre al área social para integrar todo lo público en un solo gesto, ampliando el espacio disponible en momentos de reunión y convivencia.',
     longDesc4:'Departamento Pixel parte de una idea sencilla: que cada metro trabaje a favor de quien lo vive, y que el diseño se sienta sin tener que notarse.' },
+  { id:'departamento-ef', name:'Departamento EF', type:'Residencial', location:'San Pedro, N.L.', year:'2026', client:'Privado', area:'—', status:'En construcción', planes:0,
+    portada:'foto1-SALA Y COMEDOR.png',
+    fotos:['foto1-SALA Y COMEDOR.png','foto2-SALA Y BAR.png','foto3-BARRA.png','foto4-MUEBLE DE BAR.png','foto5-CAVA.png','foto6-RECÁMARA PRINCIPAL.png','foto7-BAÑO Y VESTIDOR.png','foto8-RINCÓN DE LECTURA.png','foto9-MURO DE COLECCIÓN.png'],
+    tagline:'Diseño de interiores para un departamento en San Pedro, N.L.',
+    longDesc:'El área social se resuelve en un solo recorrido continuo: sala, comedor y bar se encadenan hacia el ventanal y la terraza, aprovechando la vista abierta a la ciudad.',
+    longDesc2:'Una paleta cálida de madera, piedra y luz indirecta da continuidad al conjunto, mientras la carpintería a medida —bar, cava, librero y vestidor— resuelve el almacenaje sin interrumpir la lectura del espacio.' },
   { id:'rancho-gg', name:'Rancho GG', type:'Campestre', location:'Allende, N.L.', year:'2025', client:'Privado', area:'1,200 m²', status:'En construcción', planes:0,
     portada:'foto1-CABALLERIZAS.png',
     fotos:['foto1-CABALLERIZAS.png','foto2-CABALLERIZAS.png','foto3-CABALLERIZAS.png','foto4-CABALLERIZAS.png','foto5- CASA DE CAMPO.jpg','foto6- CASA DE CAMPO.png','foto7-SALA COMEDOR.png','foto8- RECAMARA PRINCIPAL.png'],
@@ -75,7 +81,9 @@ const PROJECTS_RAW = [
     longDesc:'Elaboración del concepto de diseño y arquitectura para una cafetería en la Ciudad de México.',
     longDesc2:'El proyecto logró plasmar la identidad y filosofía de la marca mexicana, de forma que pudieran trasladarse a cualquier local sin perder aquello que las define.',
     longDesc3:'Al trabajar sin un espacio definido de antemano, se desarrolló un esquema modular inspirado en los bloques LEGO: a cada función o servicio requerido por la cafetería se le asigna una medida propia, y estos módulos se acomodan según el espacio y las dimensiones del futuro local comercial, garantizando su mayor funcionalidad sin importar el sitio.' },
-  { id:'cafeteria-olor', name:'Cafeteria Olor', type:'Comercial', location:'Chicago, IL', year:'2021', client:'Privado', area:'94 m²', status:'En etapa de diseño', planes:2, fotos:[],
+  { id:'cafeteria-olor', name:'Cafeteria Olor', type:'Comercial', location:'Chicago, IL', year:'2021', client:'Privado', area:'94 m²', status:'En etapa de diseño', planes:2,
+    portada:'foto1-INTERIOR Y BARRA.png',
+    fotos:['foto1-INTERIOR Y BARRA.png','foto2-AREA DE MESAS.png'],
     planosFiles:['plano1-PLANTA CON BODEGA.jpg','plano2-PLANTA CON PANADERIA.jpg'],
     tagline:'Un segundo local que continúa la identidad construida en el primero.',
     longDesc:'Diseño de cafetería para @olorcoffeebar en la ciudad de Chicago, Estados Unidos.',
@@ -185,7 +193,9 @@ function fotoLabel(filename) {
     .replace(/\.[^.]+$/, '')
     .trim()
     .toLowerCase()
-    .replace(/\b\w/g, c => c.toUpperCase());
+    // Capitaliza la inicial de cada palabra. No usar \b\w: en JS los acentos
+    // no son caracteres de palabra y romperían 'recámara' en 'RecáMara'.
+    .replace(/(^|\s)(\S)/g, (_, sep, ch) => sep + ch.toUpperCase());
 }
 
 /* URL-encoda el nombre de archivo para usarlo en src de <img> */
