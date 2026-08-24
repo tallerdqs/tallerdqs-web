@@ -60,7 +60,7 @@ const PROJECTS_RAW = [
     longDesc2:'Resuelto con materiales y colores sobrios, el departamento busca acompañar la convivencia sin volverse el protagonista: un fondo neutro que deja que la vida lo habite.',
     longDesc3:'La cocina se abre al área social para integrar todo lo público en un solo gesto, ampliando el espacio disponible en momentos de reunión y convivencia.',
     longDesc4:'Departamento Pixel parte de una idea sencilla: que cada metro trabaje a favor de quien lo vive, y que el diseño se sienta sin tener que notarse.' },
-  { id:'departamento-ef', name:'Departamento EF', type:'Residencial', location:'San Pedro, N.L.', year:'2026', client:'Privado', area:'—', status:'En construcción', planes:0,
+  { id:'departamento-ef', name:'Departamento EF', type:'Residencial', location:'San Pedro, N.L.', year:'2026', client:'Privado', area:'140 m²', status:'En construcción', planes:0,
     portada:'foto1-SALA Y COMEDOR.png',
     fotos:['foto1-SALA Y COMEDOR.png','foto2-SALA Y BAR.png','foto3-BARRA.png','foto4-MUEBLE DE BAR.png','foto5-CAVA.png','foto6-RECÁMARA PRINCIPAL.png','foto7-BAÑO Y VESTIDOR.png','foto8-RINCÓN DE LECTURA.png','foto9-MURO DE COLECCIÓN.png'],
     tagline:'Diseño de interiores para un departamento en San Pedro, N.L.',
