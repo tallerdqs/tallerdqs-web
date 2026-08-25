@@ -88,7 +88,7 @@ const PROJECTS_RAW = [
     tagline:'Un segundo local que continúa la identidad construida en el primero.',
     longDesc:'Diseño de cafetería para @olorcoffeebar en la ciudad de Chicago, Estados Unidos.',
     longDesc2:'Se conservó la misma materialidad y paleta de colores de la cafetería original, manteniendo así la identidad de la marca y generando un espacio cálido y acogedor, coherente con la experiencia que la marca ya había construido en su primer local.' },
-  { id:'estudio-maar-danza', name:'Estudio Maar Danza', type:'Comercial', location:'Santiago, N.L.', year:'2024', client:'Privado', area:'220 m²', status:'Construido', planes:1,
+  { id:'estudio-maar-danza', name:'Estudio Maar Danza', type:'Comercial', location:'Santiago, N.L.', year:'2026', client:'Privado', area:'220 m²', status:'En proceso', planes:1,
     portada:'foto1-SALA DE ESPERA Y RECEPCION.png',
     fotos:['foto1-SALA DE ESPERA Y RECEPCION.png','foto2- SALON DE BAILE.png'],
     tagline:'Un estudio de danza hecho de luz, madera y silencio.',
