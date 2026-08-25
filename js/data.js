@@ -20,7 +20,7 @@ const PROJECTS_RAW = [
     longDesc3:'El primer nivel aloja los espacios de servicio, una ubicación que el propio terreno definió. El área social se desarrolla como planta abierta, con grandes ventanas que enmarcan las montañas de Monterrey.',
     longDesc4:'Las tres recámaras se concentran en el último nivel, lejos del flujo social, lo que refuerza la privacidad del descanso. Entre un ámbito y otro, las transiciones interiores acompañan ese cambio de carácter, protegiendo la intimidad del usuario sin cerrar la casa sobre sí misma.',
     longDesc5:'Casa El Uro parte de una idea de fondo: dejar que el terreno guíe el proyecto, y construir con él en lugar de imponerse.' },
-  { id:'casa-er', name:'Casa ER', type:'Residencial', location:'Santiago, N.L.', year:'2022', client:'Privado', area:'1,950 m²', status:'En etapa de diseño', planes:3,
+  { id:'casa-er', name:'Casa ER', type:'Residencial', location:'Santiago, N.L.', year:'2026', client:'Privado', area:'1,917 m²', status:'En proceso', planes:3,
     portada:'foto1-FACHADA FRONTAL.png',
     fotos:[
       'foto1-FACHADA FRONTAL.png',
