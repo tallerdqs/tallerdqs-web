@@ -101,7 +101,7 @@ const PROJECTS_RAW = [
     longDesc:'El proyecto consiste en una extensión del área social de una residencia existente: una terraza independiente de la vivienda principal, concebida como espacio de convivencia y eventos.',
     longDesc2:'La estructura se resolvió mediante una cubierta sin columnas visibles, lo que otorga una amplitud completa al espacio y permite una circulación y conexión totalmente abiertas. Los materiales y acabados dialogan con la casa original, pero expresan con claridad la modernidad y el momento en que este espacio fue incorporado.',
     longDesc3:'El resultado es un volumen ligero que admite múltiples funcionalidades, y que integra un área de asador —elemento imprescindible para el cliente.' },
-  { id:'terraza-gt', name:'Terraza GT', type:'Comercial', location:'Chicago, IL', year:'2024', client:'Privado', area:'150 m²', status:'Construido', planes:0,
+  { id:'terraza-gt', name:'Terraza GT', type:'Residencial', location:'Santiago, N.L.', year:'2026', client:'Privado', area:'150 m²', status:'Construido', planes:0,
     portada:'Terraza GT 1.jpg',
     fotos:['Terraza GT 1.jpg','Terraza GT 2.jpg','Terraza GT 3.jpg','Terraza GT 4.jpg','Terraza GT 5.jpg','Terraza GT 6.jpg'],
     tagline:'Una azotea reconvertida en sala de estar urbana.',
