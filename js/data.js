@@ -120,7 +120,7 @@ const PROJECTS_RAW = [
     tagline:'Oficinas abiertas, ordenadas por la luz y la madera.',
     longDesc:'La planta se organiza en torno a un núcleo común que libera el perímetro para el trabajo. Se expone la losa para ganar altura y se controla la acústica con textiles.',
     longDesc2:'Salas de vidrio y áreas informales equilibran concentración y encuentro.' },
-  { id:'oficinas-dileo', name:'Oficinas Dileo', type:'Corporativo', location:'Monterrey, N.L.', year:'2023', client:'Confidencial', area:'200 m²', status:'En etapa de diseño', planes:1,
+  { id:'oficinas-dileo', name:'Oficinas Dileo', type:'Corporativo', location:'Monterrey, N.L.', year:'2024', client:'Confidencial', area:'200 m²', status:'En etapa de diseño', planes:1,
     portada:'DILEO TM 1.png',
     fotos:['DILEO TM 1.png','DILEO TM 2.png','DILEO TM 3.png'],
     planosFiles:['plano1.png'],
